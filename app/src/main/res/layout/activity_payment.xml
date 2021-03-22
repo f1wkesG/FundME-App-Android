@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.crowdfunding.Activities.PaymentActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Payments Informations"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cardnumber"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="301dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edittext_style"
+        android:ems="10"
+        android:hint="Card Number"
+        android:inputType="number"
+        android:maxLength="16"
+        android:textColor="#221C1C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/ccv"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="301dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edittext_style"
+        android:ems="10"
+        android:hint="CCV"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textColor="#221C1C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardnumber" />
+
+    <EditText
+        android:id="@+id/month"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/edittext_style"
+        android:ems="10"
+        android:hint="Month"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textColor="#221C1C"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ccv" />
+
+    <EditText
+        android:id="@+id/year"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edittext_style"
+        android:ems="10"
+        android:hint="Year"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textColor="#221C1C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/ccv" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="41dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="/"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ccv" />
+
+    <Button
+        android:id="@+id/proceed"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_style"
+        android:text="Proceed with payment"
+        android:textColor="#fafafa"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/proceed"
+        app:layout_constraintEnd_toEndOf="@+id/proceed"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/proceed" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="77dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/creditcard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/invalidtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Invalid Credentials"
+        android:textColor="#a62e21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proceed" />
+
+    <ImageView
+        android:id="@+id/err"
+        android:layout_width="23dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/error"
+        app:layout_constraintEnd_toStartOf="@+id/invalidtxt"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proceed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

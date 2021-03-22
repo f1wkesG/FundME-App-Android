@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.crowdfunding.Activities.AddPostActivity"
+    android:background="#ffffff"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/projetTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_style"
+                android:ems="10"
+                android:hint="Title"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Description :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.073"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/projetTitleTxt" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Target amount"
+                app:layout_constraintEnd_toStartOf="@+id/montantProjet"
+                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/projectDescTxt" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="Category"
+                app:layout_constraintEnd_toStartOf="@+id/categoryS"
+                app:layout_constraintHorizontal_bias="0.461"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <EditText
+                android:id="@+id/projectDescTxt"
+                android:layout_width="394dp"
+                android:layout_height="276dp"
+                android:layout_below="@+id/projetTitleTxt"
+                android:layout_marginTop="52dp"
+                android:background="@drawable/edittext_style"
+                android:ems="10"
+                android:hint="Description of the project"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/projetTitleTxt" />
+
+            <EditText
+                android:id="@+id/montantProjet"
+                android:layout_width="240dp"
+                android:layout_height="39dp"
+                android:layout_below="@+id/projectDescTxt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_style"
+                android:ems="10"
+                android:hint="Amount of money"
+                android:inputType="number"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.947"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/projectDescTxt" />
+
+            <Spinner
+                android:id="@+id/categoryS"
+                android:layout_width="240dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_style_sec"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.947"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/montantProjet" />
+
+            <EditText
+                android:id="@+id/projetDate"
+                android:layout_width="240dp"
+                android:layout_height="38dp"
+                android:layout_below="@+id/projectDescTxt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edittext_style"
+                android:ems="10"
+                android:hint="dd/mm/YYYY"
+                android:inputType="date"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.865"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryS" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="50dp"
+                android:text="Additional information :"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/projetDate" />
+
+            <EditText
+                android:id="@+id/websiteTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/edittext_style"
+                android:ems="10"
+                android:hint="Website"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/videoLinkTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/websiteTxt"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/edittext_style"
+                android:ems="10"
+                android:hint="Youtube video link"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/websiteTxt" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="253dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/videoLinkTxt"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:text="Images/Illustrations :"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/videoLinkTxt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/videoLinkTxt" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="253dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/videoLinkTxt"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="/* Choose then click upload */"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <Button
+                android:id="@+id/chooseImageBtn"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:text="Choose from phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="386dp"
+                android:layout_height="133dp"
+                android:layout_below="@+id/textView5"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chooseImageBtn"
+                tools:src="@tools:sample/avatars" />
+
+            <Button
+                android:id="@+id/uploadImagesBtn"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chooseImageBtn"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="146dp"
+                android:text="Upload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagePreview" />
+
+            <Button
+                android:id="@+id/createProjectBtn"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/projetDate"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="right"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_style"
+                android:text="Post"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.566"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/uploadImagesBtn"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/montantProjet"
+                android:layout_marginTop="44dp"
+                android:text="End date"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/projetDate"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>

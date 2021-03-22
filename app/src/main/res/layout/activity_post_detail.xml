@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.crowdfunding.Activities.PostDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#2e2e2e"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_title" />
+
+        <TextView
+            android:id="@+id/post_detail_title"
+            android:layout_width="395dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#42A5F5"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_image"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/post_detail_image"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/post_detail_date_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="12 jan 2019"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+
+            android:id="@+id/post_detail_description"
+            android:layout_width="324dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/description"
+            android:lineSpacingExtra="8dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dasellus faucibus. Cursus turpis massa tincidunt dui."
+            android:textColor="#373737"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Enter the amount you want to give to this project,"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="and the click 'contribute' to proceed with payment."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <ImageView
+            android:id="@+id/post_detail_currentuser_img"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/post_detail_comment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/post_detail_comment"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <EditText
+            android:id="@+id/post_detail_comment"
+            android:layout_width="200dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edittext_style"
+            android:ems="10"
+            android:hint="Write a comment"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toEndOf="@+id/post_detail_currentuser_img"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <Button
+            android:id="@+id/post_detail_add_comm"
+            android:layout_width="79dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_style"
+            android:text="Add"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/post_detail_comment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.703"
+            app:layout_constraintStart_toEndOf="@+id/post_detail_comment"
+            app:layout_constraintTop_toTopOf="@+id/post_detail_comment"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/post_detail_user"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="192dp"
+            app:layout_constraintBottom_toBottomOf="@+id/post_detail_date_name"
+            app:layout_constraintEnd_toEndOf="@+id/post_detail_date_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias="1.0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_comment"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/contribute_btn"
+            android:layout_width="100dp"
+            android:layout_height="42dp"
+            android:background="@drawable/btn_style_2"
+            android:text="Contribute"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/contribute_montant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toEndOf="@+id/contribute_montant"
+            app:layout_constraintTop_toTopOf="@+id/contribute_montant"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            app:layout_constraintBottom_toBottomOf="@+id/contribute_montant"
+            app:layout_constraintEnd_toStartOf="@+id/contribute_montant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/contribute_montant"
+            app:layout_constraintVertical_bias="0.565" />
+
+        <EditText
+            android:id="@+id/contribute_montant"
+            android:layout_width="167dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_style"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <ProgressBar
+            android:id="@+id/financedProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_date_name" />
+
+        <TextView
+            android:id="@+id/tv_percentage"
+            android:layout_width="79dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/financedProgress" />
+
+        <TextView
+            android:id="@+id/tv_date_expiration"
+            android:layout_width="184dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_percentage" />
+
+        <TextView
+            android:id="@+id/tv_montant_info"
+            android:layout_width="165dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#42A5F5"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_date_name" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="150dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="12dp"
+            android:text="Description :"
+            android:textColor="#42A5F5"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_expiration" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="150dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="24dp"
+            android:text="Contribution :"
+            android:textColor="#42A5F5"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_description" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="150dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="48dp"
+            android:text="Comments  :"
+            android:textColor="#42A5F5"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contribute_montant" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_my_projects"
+            android:icon="@drawable/ic_local_offer_black_24dp"
+            android:title="My Projects" />
+    </group>
+
+    <group android:checkableBehavior="single">
+    <item android:title="Category">
+        <menu>
+            <item
+                android:id="@+id/nav_cat_tech"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Technologie" />
+            <item
+                android:id="@+id/nav_cat_art"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Art" />
+            <item
+                android:id="@+id/nav_cat_cinema"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Video" />
+            <item
+                android:id="@+id/nav_cat_book"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Book" />
+            <item
+                android:id="@+id/nav_cat_design"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Design" />
+            <item
+                android:id="@+id/nav_cat_gastro"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Gastronomy" />
+            <item
+                android:id="@+id/nav_cat_jeux"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Jeux" />
+            <item
+                android:id="@+id/nav_cat_mode"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Mode" />
+            <item
+                android:id="@+id/nav_cat_music"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Music" />
+            <item
+                android:id="@+id/nav_cat_photo"
+                android:icon="@drawable/ic_label_black_24dp"
+                android:title="Photography" />
+
+        </menu>
+
+    </item>
+    </group>
+    <group android:checkableBehavior="single">
+        <item>
+            <menu>
+                <item
+                    android:id="@+id/nav_pay"
+                    android:icon="@drawable/ic_attach_money_black_24dp"
+                    android:title="Paiement" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_exit_to_app_black_24dp"
+                    android:title="Logout" />
+            </menu>
+
+        </item>
+    </group>
+
+
+</menu>
